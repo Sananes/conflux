@@ -1,0 +1,64 @@
+extends /layouts/main.pug
+
+block vars
+  - var pageTitle		= "Home";
+  - var description 	= "This is a description";
+
+block content
+
+  block content
+    .hero
+      .hero-content
+        h1.home-title Turn your users' thoughts into a product
+        p.home-leader Conflux helps you collect feedback, organize it and turn it into a product your customers will love.
+        .hero-form.form-inline
+          input.cap-right(placeholder="Enter email address")
+          button.btn.btn-primary.cap-left Get Started
+        .hero-image-container
+          .hero-image
+            .twitter-bird
+              img(src="images/twitter-bird.svg")
+
+    .brands.divider-bottom
+      .text-block.center
+        .caption.small Forward-Thinking Companies Choose Conflux
+      ul.brand-list
+        li.brand-n26
+          img(src="images/n26-logo.svg")
+        li.brand-lightspeed
+          img(src="images/lightspeed-logo.svg" height="42px")
+        li.brand-startupcompany
+          img(src="images/marvel-logo.svg" height="48")
+        li.brand-anothercompany
+          img(src="images/n26-logo.svg")
+
+    .features.divider-bottom
+      .text-block.center
+        h3.title All-in-one Feedback Management
+        p.subtitle Everything you need to understand about your customers
+      .features-list
+        .plane.arrow-plane-up
+        .plane.arrow-plane-down
+        .feature-item.first
+          img.collect(src="images/collect-feedback.svg")
+          h3.feature-item-title Collect feedback
+          p.feature-item-body Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+        .split
+          .feature-item
+            img.communicate(src="images/communicate.svg")
+            h3.feature-item-title Collect feedback
+            p.feature-item-body Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+          .feature-item
+            img.organise(src="images/organise-feedback.svg")
+            h3.feature-item-title Collect feedback
+            p.feature-item-body Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.
+    .testimonials
+      .text-block.center
+        h6.caption What people are saying...
+      .quote-block
+        blockquote "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation"
+        .quote-author
+          .quote-author-avatar
+            img(src="images/avatar.png" width="48" height="48")
+          .quote-author-name Aaron Sananes
+          .quote-author-from Product Designer @ <a href="#">Conflux</a>

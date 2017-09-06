@@ -1,0 +1,40 @@
+input, textarea {
+  font-family: $font-family;
+  background: $color-background;
+  border: 1px solid $color-border;
+  border-radius: $border-radius;
+  height: $height-button-medium;
+  padding-left: $space-small;
+  padding-right: $space-small;
+  outline: 0;
+
+  &:focus, &:active {
+    border-radius:$border-radius;
+    border-width: 1px;
+  }
+
+  &.input-large {
+    height: $height-button-large;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: color($color-border blackness(20%));
+
+    &.cap-left {
+      @extend .cap-left;
+    }
+
+    &.cap-right {
+      @extend .cap-right;
+    }
+  }
+}
+
+.form-inline {
+  display: inline-block;
+
+  * {
+    float: left;
+  }
+}

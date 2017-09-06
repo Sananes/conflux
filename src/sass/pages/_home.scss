@@ -1,0 +1,163 @@
+.hero-content {
+  text-align: center;
+  margin: $space-xxx-large auto 0 auto;
+}
+
+.hero-form {
+  margin-top: $space-xx-large;
+
+  input {
+    @extend input.input-large;
+    border-right: 0;
+  }
+  button {
+    @extend .btn.btn-large;
+  }
+}
+
+.home-title, .home-leader {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.home-title {
+  @extend %heading-2;
+  margin-bottom: $space-large;
+  padding: 0 $space-xxx-large;
+}
+
+.home-leader{
+  @extend .body-leader;
+  padding: 0 calc(#{$space-xxx-large} * 2);
+}
+.hero-image-container {
+
+}
+.hero-image {
+  position: relative;
+  max-width: 100%;
+  background-image: url(../images/browser@2x.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 954px;
+  height: 613px;
+  margin: $space-xxx-large auto;
+
+  .twitter-bird {
+    position: absolute;
+    right: 80px;
+    top: -70px;
+
+    @media(--only-small-screen) {
+      img { width: 40%; }
+    }
+  }
+}
+// Brands Section
+.brands {
+  margin: $space-xx-large 0;
+  padding-bottom: $space-xx-large;
+  .brand-list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+
+    li { display: inline-block; margin: 0 $space-large; }
+  }
+  .brand-n26 {
+    width: width('n26-logo.svg');
+    height: height('n26-logo.svg');
+  }
+}
+
+// Features Section
+.features {
+  margin: calc(#{$space-xxx-large} * 2) 0;
+  padding-bottom: calc(#{$space-xxx-large} * 3);
+
+
+  .title {
+    margin-top: 0;
+  }
+
+  .features-list {
+    position: relative;
+    background: url('../images/conflux-logo.svg') 50% 62% no-repeat;
+    margin-top: $space-xxx-large;
+    @include grid-container();
+
+    .plane {
+      position: absolute;
+
+      &.arrow-plane-up {
+        top: 200px;
+        left: 18%;
+      }
+      &.arrow-plane-down {
+        top: 200px;
+        right: 18%;
+      }
+    }
+  }
+
+  .feature-item {
+    text-align: center;
+
+    &.first {
+      margin: 0 auto;
+      max-width: 300px;
+    }
+  }
+
+  .split {
+    margin-top: calc(#{$space-xxx-large} * 2.5);
+    background: url('../images/arrow-plane-middle.svg') no-repeat 50% 85%;
+    @include grid-container();
+
+    .feature-item {
+      @include grid-column(3);
+
+      &:last-child {
+        @include grid-column(3);
+        @include grid-push(6);
+
+      }
+    }
+  }
+
+  .feature-item-title {
+    @extend %heading-5;
+    font-weight: $font-weight-bold;
+    margin-bottom: $space-small;
+  }
+  .feature-item-body {
+    margin-top: calc(#{$space-xx-small} * -1);
+    font-size: $font-size-body;
+  }
+}
+
+
+.plane {
+  background-repeat: no-repeat;
+
+  &.arrow-plane-up {
+    background-image: url(../images/arrow-plane-up.svg);
+    background-position: static;
+    width: 75px;
+    height: 111px;
+  }
+
+  &.arrow-plane-down {
+    background-image: url(../images/arrow-plane-down.svg);
+    background-position: static;
+    width: 73px;
+    height: 111px;
+  }
+
+  &.arrow-plane-middle {
+    background-image: url(../images/arrow-plane-middle.svg);
+    width: image-width('arrow-plane-middle.png');
+    height: image-height('arrow-plane-middle.png');
+  }
+}

@@ -1,0 +1,42 @@
+button, .btn {
+  font-family: $font-family;
+  outline: 0;
+  font-weight: $font-weight-bold;
+  background: $color-button;
+  display: block;
+  text-decoration: none;
+  border-radius: $border-radius;
+  padding: 0 $space-small;
+  border: none;
+  height: $height-button-medium;
+  border-color: $color-primary;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($color-button, 10%);
+  }
+  &.btn-small {
+    height: $height-button-small;
+    line-height: calc(#{$height-button-small} - 1px);
+  }
+  &.btn-primary {
+    color: $color-white;
+  }
+  &.btn-outline {
+    border: 1px solid $color-button;
+    background: transparent;
+    color: $color-primary;
+
+    &:hover {
+      background: lighten($color-button, 10%);
+      border-color: lighten($color-button, 10%);
+      color: $color-white;
+    }
+  }
+  &.btn-large{
+    height: $height-button-large;
+    line-height: calc(#{$height-button-large} - 1px);
+    padding-left: $space-large;
+    padding-right: $space-large;
+  }
+}

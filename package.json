@@ -1,0 +1,37 @@
+{
+  "name": "gulp-static-gen-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bourbon-neat": "^1.9.0",
+    "browser-sync": "^2.12.8",
+    "browserify": "^13.0.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-pretty-url": "^0.1.1",
+    "gulp-pug": "^3.0.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "jquery": "^2.2.4",
+    "normalize-scss": "^5.0.2",
+    "permalinks": "^0.3.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "bourbon-neat": "^1.9.0",
+    "gulp-css-image-dimensions": "^1.1.5",
+    "gulp-image": "^3.0.0",
+    "gulp-rev": "^8.0.0",
+    "lost": "^8.2.0",
+    "neat": "^1.2.2",
+    "node-neat": "^2.0.0-beta.0"
+  }
+}

@@ -1,0 +1,33 @@
+@import "node_modules/normalize-scss/sass/normalize/import-now";
+@import "neat";
+
+@import 'mixins/_breakpoints';
+
+@import 'tokens/color';
+@import 'tokens/default';
+@import 'tokens/sizing';
+@import 'tokens/typography';
+
+// Mixins
+
+
+// Partials
+@import 'partials/buttons';
+@import 'partials/inputs';
+@import 'partials/common';
+@import 'partials/header';
+@import 'partials/footer';
+
+// Pages
+@import 'pages/home';
+
+
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: $color-background;
+  font-family: $font-family;
+}

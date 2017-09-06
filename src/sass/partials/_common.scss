@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: lighten($color-text, 10%);
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: lighten($color-text, 10%);
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: lighten($color-text, 10%);
+  opacity: 1;
+}
+
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: lighten($color-text, 10%);
+  opacity: 1;
+}
+
+body {
+  background: $color-background;
+  font-family: $font-family;
+  color: $color-text;
+  line-height: $line-height;
+  font-size: $font-size-base;
+  letter-spacing: -0.15px;
+}
+
+a {
+  color: $color-link;
+
+  &:hover {
+    color: $color-link;
+  }
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $color-heading;
+  font-weight: normal;
+}
+
+h1, %heading-1 {
+  font-size: $font-size-xxx-large;
+}
+
+h2, %heading-2 {
+  font-size: $font-size-xx-large;
+  line-height: $line-height-tight;
+}
+
+h3, %heading-3 {
+  font-size: $font-size-x-large;
+}
+
+h4, %heading-4 {
+  font-size: $font-size-large;
+}
+
+h5, %heading-5 {
+  font-size: $font-size-medium;
+}
+
+h6, %heading-6 {
+  font-size: $font-size-body;
+}
+
+.body-leader, %body-leader {
+  font-size: $font-size-medium;
+}
+// Common
+.container {
+  width: 100%;
+  max-width: $width-page-max;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+// Border Radius Capping
+.cap-right {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.cap-left {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+// Text blocks
+.text-block {
+  .title {
+    @extend %heading-3;
+    margin-bottom: 0;
+  }
+  .subtitle {
+    font-size: $font-size-medium;
+  }
+
+  .caption {
+    @extend %heading-6;
+    color: $color-text;
+    margin: $space-x-large 0;
+
+    &.small {
+      font-size: $font-size-small;
+      color: $color-muted;
+    }
+  }
+
+  &.center {
+    text-align: center;
+  }
+}
+
+// Dividers
+.divider-top {
+  border-top: 1px solid $color-border;
+}
+.divider-bottom {
+  border-bottom: 1px solid $color-border;
+}
+
+// Testimonials
+.testimonials {
+  text-align: center;
+
+  .caption {
+    margin-top: calc(#{$space-xxx-large} * 2);
+  }
+}
+.quote-block {
+  margin: 0 auto;
+  max-width: 700px;
+  margin-bottom: calc(#{$space-xxx-large} * 2);
+
+  blockquote {
+    @extend %heading-4;
+    color: $color-heading;
+    margin-bottom: $space-x-large;
+  }
+  .quote-author-avatar {
+    margin-bottom: $space-x-small;
+  }
+  .quote-author-name {
+    color: $color-heading;
+    font-weight: $font-weight-bold;
+  }
+}
+
+
+// Illustrations
+.twitter-bird {
+  width: width('twitter-bird.svg');
+  height: height('twitter-bird.svg');
+}

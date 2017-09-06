@@ -1,0 +1,8 @@
+@function strip-units($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+// Used to convert `px` based sizings to `rem`. 16px is used as a design base size
+@function rem($pxval, $rem-base: 16px) {
+  @return (strip-units($pxval) / strip-units($rem-base)) * 1rem;
+}

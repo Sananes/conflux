@@ -1,0 +1,34 @@
+.footer {
+  color: $color-footer-link;
+}
+.footer-container {
+  @include grid-container;
+  margin: calc(#{$space-x-large}) 0;
+}
+.footer-column {
+  @include grid-column(2.5);
+
+  &.col-large {
+    @include grid-column(4);
+    @include grid-push(0.5);
+
+    input {
+      width: 80%;
+    }
+  }
+}
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-header {
+  font-size: $font-size-body;
+  margin-bottom: $space-x-small;
+  font-weight: $font-weight-bold;
+}
+
+.footer-item-link {
+  color: $color-footer-link;
+  text-decoration: none;
+}
