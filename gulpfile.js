@@ -4,6 +4,7 @@ var gulp 		= require('gulp');
 	prettUrl	= require('gulp-pretty-url'),
 	sourcemaps	= require('gulp-sourcemaps'),
 	rev	= require('gulp-rev'),
+	revReplace = require('gulp-rev-replace'),
 	image = require('gulp-image'),
 	browserify 	= require('browserify'),
 	source		= require('vinyl-source-stream'),
@@ -40,6 +41,7 @@ gulp.task('sass-dist', function() {
 	.pipe(sourcemaps.init({loadMaps:true}))
 	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 	.pipe(sourcemaps.write('./'))
+	.pipe(rev())
 	.pipe(gulp.dest('build/css/'))
 });
 

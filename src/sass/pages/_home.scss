@@ -36,11 +36,6 @@
 .hero-image {
   position: relative;
   max-width: 100%;
-  background-image: url(../images/browser@2x.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 954px;
-  height: 613px;
   margin: $space-xxx-large auto;
 
   .twitter-bird {
@@ -133,7 +128,7 @@
   }
   .feature-item-body {
     margin-top: calc(#{$space-xx-small} * -1);
-    font-size: $font-size-body;
+    @extend %body;
   }
 }
 

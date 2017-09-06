@@ -32,6 +32,10 @@ body {
   line-height: $line-height;
   font-size: $font-size-base;
   letter-spacing: -0.15px;
+
+  @include media($max: $bp-small) {
+    font-size: $font-size-small;
+  }
 }
 
 a {
@@ -49,12 +53,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, %heading-1 {
-  font-size: $font-size-xxx-large;
+  @include font-size($h1-font-sizes);
+
+  @include media($max: $bp-small) {
+    font-size: $font-size-large;
+  }
 }
 
 h2, %heading-2 {
   font-size: $font-size-xx-large;
   line-height: $line-height-tight;
+
+  @include media($max: $bp-small) {
+    font-size: $font-size-x-large;
+  }
 }
 
 h3, %heading-3 {
@@ -73,8 +85,19 @@ h6, %heading-6 {
   font-size: $font-size-body;
 }
 
+%body {
+  font-size: $font-size-medium;
+
+  @include media($max: $bp-small) {
+    font-size: $font-size-small;
+  }
+}
 .body-leader, %body-leader {
   font-size: $font-size-medium;
+
+  @include media($max: $bp-small) {
+    font-size: $font-size-small;
+  }
 }
 // Common
 .container {

@@ -8,3 +8,30 @@ $no-gutter-grid: (
   columns: 12,
   gutter: 0,
 );
+
+
+$bp-xs: 320px;
+$bp-small: 376px;
+$bp-medium: 769px;
+$bp-large: 1025px;
+
+
+$breakpoints: (
+  small : $bp-small,
+  medium: $bp-medium, // Previously 640px
+  large : $bp-large
+);
+
+$p-font-sizes: (
+  null  : 15px,
+  small : 16px,
+  medium: 17px,
+  large : 19px
+);
+
+$h1-font-sizes: (
+  null  : 28px,
+  small : 31px,
+  medium: 33px,
+  large : 36px
+);

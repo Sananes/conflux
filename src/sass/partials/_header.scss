@@ -23,6 +23,10 @@
   margin: 0;
   padding: 0;
   margin-right: calc(#{$space-small} * -1);
+
+  @include media($max: $bp-medium) {
+    display: none;
+  }
 }
 
 .header-nav-split {
