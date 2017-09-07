@@ -5,6 +5,8 @@ var gulp 		= require('gulp');
 	sourcemaps	= require('gulp-sourcemaps'),
 	rev	= require('gulp-rev'),
 	revReplace = require('gulp-rev-replace'),
+	collect = require('gulp-rev-collector'),
+	revdel = require('rev-del'),
 	image = require('gulp-image'),
 	browserify 	= require('browserify'),
 	source		= require('vinyl-source-stream'),
@@ -32,21 +34,24 @@ gulp.task('templates', function() {
 
 gulp.task('images', function () {
   gulp.src('./src/images/**/*')
-    .pipe(image())
     .pipe(gulp.dest('build/images/'));
 });
 
+gulp.task('images-dist', function () {
+  gulp.src('./src/images/**/*')
+    .pipe(image())
+    .pipe(gulp.dest('build/images/'));
+});
 gulp.task('sass-dist', function() {
 	gulp.src('src/sass/**/*.scss')
 	.pipe(sourcemaps.init({loadMaps:true}))
-	.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+	.pipe(sass({includePaths: ['sass-dev'].concat(neat)},{outputStyle: 'compressed'}).on('error', sass.logError))
 	.pipe(sourcemaps.write('./'))
-	.pipe(rev())
 	.pipe(gulp.dest('build/css/'))
 });
 
 gulp.task('sass-dev', function() {
-	gulp.src('src/sass/index.scss')
+	gulp.src('src/sass/**/*.scss')
 		.pipe(sourcemaps.init({loadMaps:true}))
 		.pipe(sass({includePaths: ['sass-dev'].concat(neat)}).on('error', sass.logError))
 		.pipe(sourcemaps.write('./'))
@@ -93,6 +98,7 @@ gulp.task('build', ['clean'], function(){
 	gulp.start('templates');
 	gulp.start('sass-dist');
 	gulp.start('scripts-dist');
+	gulp.start('images-dist');
 });
 
 
